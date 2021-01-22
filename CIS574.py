@@ -6,6 +6,15 @@ Assert = lambda bCond=False, sTxt='': printRed(sTxt) if bCond else None
 np.set_printoptions(linewidth=10000, precision=4, edgeitems=20, suppress=True)
 pd.set_option('max_rows', 100, 'max_columns', 100, 'max_colwidth', 100, 'precision', 2, 'display.max_rows', 8)
 
+def CorpusStats(CorpusName='gutenberg', C=None):
+  tmp = nltk.download(CorpusName, quiet=True)  # https://www.nltk.org/book/ch02.html
+  def GetSents(C,n):
+    try: return len(C.sents(n))
+    except: return 0
+  Stats=[(n, GetSents(C,n), len(C.words(n)), len(C.raw(n)), ' '.join(C.words(n)[:100])) for n in C.fileids()]
+  df = pd.DataFrame(Stats, columns=[CorpusName,'sents','words','char','raw'])
+  return df.sort_values('words')
+
 
 # import sys
 # if not 'yake' in sys.modules:

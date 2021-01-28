@@ -17,7 +17,15 @@ def CorpusStats(CorpusName='gutenberg', C=None):
   df = pd.DataFrame(Stats, columns=[CorpusName,'sents','words','char','raw'])
   return df.sort_values('words')
 
-
+def ShowNLTKCorpora():
+  CorpusStats('webtext', nltk.corpus.webtext)
+  CorpusStats('gutenberg', nltk.corpus.gutenberg)
+  CorpusStats('brown', nltk.corpus.brown)
+  CorpusStats('reuters', nltk.corpus.reuters)
+  CorpusStats('inaugural', nltk.corpus.inaugural)
+  CorpusStats('nps_chat', nltk.corpus.nps_chat)
+  CorpusStats('names', nltk.corpus.names)
+  
 # import sys
 # if not 'yake' in sys.modules:
 #   !pip -q install yake > tmp.log     # https://github.com/LIAAD/yake

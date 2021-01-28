@@ -25,7 +25,7 @@ def ShowNLTKCorpora():
   CorpusStats('inaugural', nltk.corpus.inaugural)
   CorpusStats('nps_chat', nltk.corpus.nps_chat)
   CorpusStats('names', nltk.corpus.names)
-
+ 
 # import sys
 # if not 'yake' in sys.modules:
 #   !pip -q install yake > tmp.log     # https://github.com/LIAAD/yake

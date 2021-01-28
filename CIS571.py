@@ -18,13 +18,13 @@ def CorpusStats(CorpusName='gutenberg', C=None):
   return df.sort_values('words')
 
 def ShowNLTKCorpora():
-  CorpusStats('webtext', nltk.corpus.webtext)
-  CorpusStats('gutenberg', nltk.corpus.gutenberg)
-  CorpusStats('brown', nltk.corpus.brown)
-  CorpusStats('reuters', nltk.corpus.reuters)
-  CorpusStats('inaugural', nltk.corpus.inaugural)
-  CorpusStats('nps_chat', nltk.corpus.nps_chat)
-  CorpusStats('names', nltk.corpus.names)
+  print(CorpusStats('webtext', nltk.corpus.webtext))
+  print(CorpusStats('gutenberg', nltk.corpus.gutenberg))
+  print(CorpusStats('brown', nltk.corpus.brown))
+  print(CorpusStats('reuters', nltk.corpus.reuters))
+  print(CorpusStats('inaugural', nltk.corpus.inaugural))
+  print(CorpusStats('nps_chat', nltk.corpus.nps_chat))
+  print(CorpusStats('names', nltk.corpus.names))
  
 # import sys
 # if not 'yake' in sys.modules:

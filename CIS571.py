@@ -1,6 +1,6 @@
 import sys
 from IPython.core.interactiveshell import InteractiveShell as IS; IS.ast_node_interactivity = "all" # OK TO DELETE
-import numpy as np, pandas as pd, nltk, re, string, matplotlib.pyplot as plt, seaborn as sns, pprint
+import numpy as np, pandas as pd, nltk, re, string, matplotlib.pyplot as plt, seaborn as sns, pprint, unicodedata
 from collections import Counter
 
 RED, END = '\033[91m', '\033[0m'

@@ -6,7 +6,7 @@ RED, END = '\033[91m', '\033[0m'
 printRed = lambda sTxt: print(RED + sTxt + END)  # lambda function
 Assert = lambda bCond=False, sTxt='': printRed(sTxt) if not bCond else None
 np.set_printoptions(linewidth=10000, precision=4, edgeitems=20, suppress=True)
-pd.set_option('max_rows', 100, 'max_columns', 100, 'max_colwidth', 100, 'precision', 2, 'display.max_rows', 8)
+pd.set_option('display.max_rows', 100, 'display.max_columns', 100, 'display.max_colwidth', 100, 'display.precision', 2, 'display.max_rows', 8)
 
 def CorpusStats(CorpusName='gutenberg', C=None):
   tmp = nltk.download(CorpusName, quiet=True)  # https://www.nltk.org/book/ch02.html
